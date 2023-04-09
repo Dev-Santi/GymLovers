@@ -82,7 +82,7 @@ a:hover {
     align-items: center;
     background: rgb(0, 0, 0);
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.75) 67%, rgba(0, 0, 0, 0) 100%);
-    padding: 2rem;
+    padding: 0 2rem;
     overflow: hidden;
     z-index: 1000;
 }
@@ -103,11 +103,11 @@ a:hover {
 .menu {
     position: fixed;
     inset: 0;
-    width: 20rem;
+    width: 22rem;
     height: 100vh;
     background-color: var(--gray);
     padding: 2rem;
-    padding-top: 8rem;
+    padding-top: 5.5rem;
     transform: translateX(-22rem);
     transition: 0.3s;
 }
@@ -123,6 +123,10 @@ a:hover {
     margin-left: -2rem;
     margin-right: -2rem;
     border-bottom: 1px solid var(--green);
+}
+
+.menu_social ul li {
+    font-size: 3.5rem;
 }
 
 .menu_social ul {
@@ -216,12 +220,13 @@ button.active .bar:nth-child(4) {
 .main_content {
     min-height: 50rem;
     padding: 2rem;
-    padding-top: 8rem;
+    padding-top: 6rem;
 }
 
 .main_intro {
     text-align: center;
     color: var(--text);
+    margin-bottom: 6rem;
 }
 
 .main_intro h1 {
@@ -256,4 +261,69 @@ p {
 .main_intro a:hover {
     text-shadow: none;
     color: var(--blue);
+}
+
+.main_readyToGo {
+    background-color: #e1e1e1;
+    margin-inline: -2rem;
+    text-align: center;
+}
+
+.main_readyToGo h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    color: var(--title);
+    transform: translateY(2rem);
+}
+
+.main_readyToGo h2 i {
+    margin: 0 2rem;
+    color: var(--light-gray);
+}
+
+.main_readyToGo .arrow {
+    position: relative;
+    background-color: #e1e1e1;
+    width: 6rem;
+    height: 6rem;
+    transform: translateY(3rem) rotate(45deg);
+    margin: 0 auto;
+    z-index: 100;
+}
+
+.main_readyToGo .fitness,
+.main_readyToGo .athlete {
+    height: 35rem;
+    background-color: var(--light-gray);
+    cursor: pointer;
+}
+
+.main_readyToGo .fitness .fitness_bg,
+.main_readyToGo .athlete .athlete_bg {
+    transition: 0.2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+    color: #fff;
+    text-shadow: 0 0 10px #000;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.main_readyToGo .fitness .fitness_bg {
+    background-image: url("./assets/bgs/fitness.jpg");
+
+}
+
+.main_readyToGo .athlete .athlete_bg {
+    background-image: url("./assets/bgs/athlete.jpg");
+}
+
+.main_readyToGo .athlete:hover .athlete_bg,
+.main_readyToGo .fitness:hover .fitness_bg {
+    opacity: 0.7;
 }
