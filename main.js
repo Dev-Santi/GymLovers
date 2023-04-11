@@ -10,21 +10,22 @@ menuBtn.addEventListener("click", () => {
 });
 
 /* Header bgs */
+const arrow = `<i class="fa-solid fa-arrow-right-long"></i>`;
 const backgrounds = [
   {
     class: "bg_a",
     text: "Un programa divertido de fitness.<br>En tu barrio.<br>Enfocados 100% a tí.",
-    btn: "Conoce a nuestro equipo",
+    btn: `Conoce a nuestro equipo ${arrow}`,
   },
   {
     class: "bg_b",
     text: "Atención más personalizada.<br>Mejor experiencia profesional.",
-    btn: "Nuestra historia",
+    btn: `Nuestra historia ${arrow}`,
   },
   {
     class: "bg_c",
     text: "Creemos en tu potencial.<br>El tuyo.<br>El nuestro.",
-    btn: "Ver comentarios",
+    btn: `Ver comentarios ${arrow}`,
   },
 ];
 
@@ -50,4 +51,4 @@ setInterval(() => {
   //Count
   count++;
   count > 2 ? (count = 0) : "";
-}, 4000);
+}, 10000);

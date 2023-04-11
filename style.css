@@ -216,16 +216,15 @@ button.active .bar:nth-child(4) {
 
 .header_main h2 {
     font-size: 2rem;
-    padding-right: 2rem;
+    padding-right: 1rem;
     border-right: 4px solid var(--translucent-green);
     text-transform: uppercase;
-    max-width: 50rem;
     text-align: center;
     margin-left: auto;
 }
 
 .header_main a {
-    width: 28rem;
+    width: fit-content;
     display: flex;
     justify-content: center;
     align-items: center;
