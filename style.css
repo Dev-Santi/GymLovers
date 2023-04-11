@@ -19,7 +19,7 @@
     --gray: #262626;
     --light-gray: #888888;
     --title: #262626;
-    --text: #434343;
+    --text: #222222;
 }
 
 /* tags */
@@ -90,9 +90,23 @@ a:hover {
 }
 
 .header_bg {
+    background-size: cover;
+    transition: 3s;
+}
+
+.bg_a {
     background-image: url("./assets/bgs/bg_gym.jpg");
     background-position: center;
-    background-size: cover;
+}
+
+.bg_b {
+    background-image: url("./assets/bgs/bg_boxer.jpg");
+    background-position: 73%;
+}
+
+.bg_c {
+    background-image: url("./assets/bgs/bg_man.jpg");
+    background-position: 5%;
 }
 
 .nav {
@@ -145,7 +159,7 @@ a:hover {
 }
 
 .menu_social ul li {
-    font-size: 3.5rem;
+    font-size: 3rem;
 }
 
 .menu_social ul {
@@ -194,27 +208,24 @@ button.active .bar:nth-child(4) {
 
 /* Header main text */
 .header_main {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
     color: #fff;
     backdrop-filter: blur(0.2rem);
     background-color: rgba(31, 31, 31, 0.881);
-    padding: 2rem 3rem;
+    padding: 1rem 2.5rem 2rem;
 }
 
 .header_main h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     padding-right: 2rem;
     border-right: 4px solid var(--translucent-green);
     text-transform: uppercase;
     max-width: 50rem;
     text-align: center;
+    margin-left: auto;
 }
 
 .header_main a {
-    min-width: 15rem;
-    min-height: 5rem;
+    width: 28rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -240,9 +251,7 @@ button.active .bar:nth-child(4) {
 .main_content {
     min-height: 50rem;
     padding: 8rem 2rem 2rem;
-    background-image: url("./assets/bgs/bg.jpg");
-    background-size: cover;
-    background-attachment: fixed;
+    background-color: #e1e1e1;
 }
 
 .main_intro {
@@ -436,8 +445,9 @@ footer .top_banner a:hover {
 
 footer .footer_main {
     background-image: url("./assets/bgs/bg_gym.jpg");
-    background-position: center;
+    background-position: right;
     background-size: cover;
+    background-attachment: fixed;
 }
 
 footer .footer_main div {
