@@ -11,7 +11,7 @@
 :root {
     font-size: 62.5%;
     /*  */
-    --green: #42ce33;
+    --green: #349e28;
     --translucent-green: #60ff4ea1;
     --dark-green: #0a6300;
     --translucent-gray: #80808076;
@@ -58,7 +58,6 @@ a {
 
 a:hover {
     color: var(--green);
-    text-shadow: 0 0 5px var(--light-gray);
 }
 
 /* utilities */
@@ -87,6 +86,7 @@ a:hover {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    border-bottom: var(--green) 5px solid;
 }
 
 .header_bg {
@@ -100,7 +100,7 @@ a:hover {
     justify-content: space-between;
     align-items: center;
     background: rgb(0, 0, 0);
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.75) 67%, rgba(0, 0, 0, 0) 100%);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.75) 75%, rgba(0, 0, 0, 0) 100%);
     padding: 0 2rem;
     overflow: hidden;
     z-index: 1000;
@@ -108,11 +108,11 @@ a:hover {
 
 .header_logo {
     width: 15rem;
-    opacity: 0.7;
+    opacity: 1;
 }
 
 .header_logo:hover {
-    opacity: 1;
+    opacity: 0.7;
 }
 
 .header_logo img {
@@ -165,9 +165,9 @@ a:hover {
     margin: 0.8rem 0;
     display: block;
     height: 0.4rem;
-    background-color: grey;
-    transition: 0.2s;
-    box-shadow: 0 0 10px #000000bd;
+    background-color: #15c615;
+    transition: 0.5s ease-in-out;
+    box-shadow: 0 0 10px #000000ab;
 }
 
 .nav button:hover span {
@@ -199,35 +199,36 @@ button.active .bar:nth-child(4) {
     align-items: flex-end;
     color: #fff;
     backdrop-filter: blur(0.2rem);
-    background-color: var(--translucent-gray);
+    background-color: rgba(31, 31, 31, 0.881);
     padding: 2rem 3rem;
 }
 
 .header_main h2 {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     padding-right: 2rem;
     border-right: 4px solid var(--translucent-green);
     text-transform: uppercase;
     max-width: 50rem;
+    text-align: center;
 }
 
 .header_main a {
-    min-width: 20rem;
+    min-width: 15rem;
     min-height: 5rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--gray);
+    background-color: var(--green);
     margin: 0 auto;
     margin-top: 4rem;
-    font-size: 2rem;
+    font-size: 1.5rem;
     box-shadow: 0 0 10px #000000a9;
     text-transform: uppercase;
     padding: 2rem;
 }
 
 .header_main a:hover {
-    background-color: var(--translucent-green);
+    background-color: var(--gray);
     color: #fff;
 }
 
@@ -238,13 +239,16 @@ button.active .bar:nth-child(4) {
 /* Main content */
 .main_content {
     min-height: 50rem;
-    padding: 0 2rem;
+    padding: 8rem 2rem 2rem;
+    background-image: url("./assets/bgs/bg.jpg");
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 .main_intro {
     text-align: center;
     color: var(--text);
-    margin: 12rem 0;
+    margin: 0;
 }
 
 .main_intro h1 {
@@ -351,18 +355,18 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 10rem;
+    margin: 4rem 0;
 }
 
 .card {
     display: flex;
     flex-direction: column;
     max-width: 60rem;
-    margin: 6rem 0;
+    margin: 5rem 0;
 }
 
 .card .card_img {
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     max-height: 40rem;
 }
 
@@ -374,13 +378,13 @@ p {
 .card h3 {
     font-size: 3rem;
     font-weight: 700;
-    margin-bottom: 2.5rem;
+    margin-bottom: 2rem;
     text-transform: uppercase;
 }
 
 .card p {
     font-size: 1.8;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
 }
 
 .card a {
@@ -406,9 +410,6 @@ p {
 }
 
 /* footer */
-footer {
-    margin-top: 8rem;
-}
 
 footer .top_banner {
     padding: 5rem 0;
@@ -454,14 +455,14 @@ footer .footer_main div ul li {
 }
 
 footer .footer_main div ul li i {
-    color: var(--green);
     width: 6rem;
     height: 6rem;
     font-size: 2.5rem;
     border-radius: 50%;
-    border: 3px solid var(--green);
     display: flex;
-    transition: 0.2s;
+    transition: 0.1s;
+    color: #fff;
+    border-color: var(--light-gray);
 }
 
 footer .footer_main div ul li:hover {
@@ -469,9 +470,8 @@ footer .footer_main div ul li:hover {
 }
 
 footer .footer_main div ul li:hover i {
-    color: var(--light-gray);
-    border-color: var(--light-gray);
-    text-shadow: none;
+    color: var(--green);
+    border: 3px solid var(--green);
 }
 
 
@@ -483,18 +483,16 @@ footer .footer_main .address {
 footer .footer_main .address h3 {
     text-align: center;
     font-size: 2.5rem;
-    color: #fff;
+    color: #b7b7b7;
 }
 
 footer .address a {
     width: 15rem;
     height: 4rem;
-    margin-top: 2rem;
-    font-size: 1.2rem;
+    margin-top: 3rem;
+    font-size: 1.4rem;
     background-color: transparent;
-    border: none;
     color: var(--green);
-    cursor: pointer;
     gap: 1rem;
 }
 
