@@ -51,4 +51,4 @@ setInterval(() => {
   //Count
   count++;
   count > 2 ? (count = 0) : "";
-}, 10000);
+}, 5000);
